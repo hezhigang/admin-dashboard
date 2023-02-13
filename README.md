@@ -89,3 +89,21 @@ dotnet aspnet-codegenerator razorpage -m Category -dc ApplicationDbContext -udl 
 ```
 dotnet aspnet-codegenerator razorpage -m Book -dc ApplicationDbContext -udl -outDir Pages/Books --referenceScriptLibraries
 ```
+
+# Install and Run PostgreSQL using Docker
+
+## Install and Configure PSQL using Docker
+
+```
+docker run --name postgresql-container -p 5432:32768 -e POSTGRES_PASSWORD=postgrespw -d postgres
+```
+
+## Install PG-admin using Docker
+
+```
+docker run --rm -p 5050:80 dpage/pgadmin4 
+```
+
+# refs
+
+- [How To Install and Run PostgreSQL using Docker ?](https://dev.to/shree_j/how-to-install-and-run-psql-using-docker-41j2)

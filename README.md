@@ -92,10 +92,16 @@ dotnet aspnet-codegenerator razorpage -m Book -dc ApplicationDbContext -udl -out
 
 # Install and Run PostgreSQL using Docker
 
+I used Docker Desktop on Mac, and it is straightforward.
+
+![Docker Desktop Containers](./docker-desktop-containers.png)
+
+if you favor docker CLI, scaffolded commands as below:
+
 ## Install and Configure PSQL using Docker
 
 ```
-docker run --name postgresql-container -p 5432:32768 -e POSTGRES_PASSWORD=postgrespw -d postgres
+docker-compose -f docker-compose.yml up -d
 ```
 
 ## Install PG-admin using Docker
@@ -107,3 +113,6 @@ docker run --rm -p 5050:80 dpage/pgadmin4
 # refs
 
 - [How To Install and Run PostgreSQL using Docker ?](https://dev.to/shree_j/how-to-install-and-run-psql-using-docker-41j2)
+- [How to run a PostgreSQL database using Docker Compose in just a few minutes?](https://blog.christian-schou.dk/run-postgresql-database-using-docker-compose/)
+- [Postgres with Docker and Docker compose a step-by-step guide for beginners](https://geshan.com.np/blog/2021/12/docker-postgres/)
+- [Compose file specification](https://docs.docker.com/compose/compose-file/)

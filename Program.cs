@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using admin_dashboard.Data;
+using admin_dashboard.Models;
 
 namespace admin_dashboard;
 
@@ -21,6 +22,13 @@ public class Program
         builder.Services.AddRazorPages();
 
         var app = builder.Build();
+
+        using (var scope = app.Services.CreateScope())
+        {
+            var services = scope.ServiceProvider;
+
+            SeedData.Initialize(services);
+        }
 
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())

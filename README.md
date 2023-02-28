@@ -110,6 +110,8 @@ docker-compose -f docker-compose.yml up -d
 docker run --rm -p 5050:80 dpage/pgadmin4 
 ```
 
+Seems [csharp-rest-service](https://github.com/trisberg/csharp-rest-service) is a good example.
+
 # refs
 
 - [How To Install and Run PostgreSQL using Docker ?](https://dev.to/shree_j/how-to-install-and-run-psql-using-docker-41j2)
